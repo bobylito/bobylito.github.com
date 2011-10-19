@@ -2,7 +2,9 @@
 html{
   font-size: 62.5% ; 
   font-family: "Calibri", "Myriad Pro", "Arial", sans-serif; 
-  background: url('../images/line.png') 
+  background:#CCC;
+  height:100%;
+  padding-left:3em
 }
 p, li, th, td {
   font-size : 1.6em;
@@ -14,7 +16,8 @@ p {
 }
 
 ul, ol{
-  margin-bottom : 2.4em;
+  padding-bottom : 2.4em;
+  list-style-type:none;
 }
 
 h1, h2, h3 {
@@ -31,5 +34,31 @@ h2 {
 }
 
 h1 {
-  font-size : 3.2em;
+  font-size : 6.4em;
+}
+
+a{
+  text-decoration:none;
+  color:#00A0B0;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+}
+a:hover{
+  color: #CC333F;
+}
+
+body {
+  width:300px;
+  background:#FFF;
+  min-height:100%;
+}
+
+.social li{
+  display:inline;
+}
+
+.post {
+  /*font-size: 75%;*/
 }

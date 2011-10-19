@@ -1,0 +1,58 @@
+---
+layout: post 
+title: Github with multiple accounts 
+---
+
+h2. Using github with multiple accounts
+
+Nowadays having a github account is quite convenient (if not mandatory for some). It really helps you show what you 
+can do to others, and by others I really potential employers or clients. The only problem is that when you finally 
+got hired by this dream company who has looked for you on Github, they probably use Github too. Therefore you might 
+be wondering if you should use your very own/personnal account. 
+
+I decided to open a distinct account for this purpose. And here is my personnal recipe to use both accounts on my computer. 
+
+Disclaimer : I use MacOS X and Linux, and I don't have a clue how it could work for windows.
+
+h3. SSH Keys
+
+I'll assume here you already have keys and their public parts are both registered on your github accounts. Let's say, 
+we have the following in our ~/.ssh folder :
+<pre><code>config
+id_rsa_alice
+id_rsa_alice.pub
+id_rsa_bob
+id_rsa_bob.pub
+</code></pre>
+
+Now let's edit the config file. We are adding some url specific configuration: 
+
+<pre><code>Host alice.github.com
+  Hostname github.com
+  User git 
+  IdentityFile ~/.ssh/id_rsa_alice
+Host bob.github.com
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_bob
+</code></pre>
+
+These lines actually make automatic redirection to github to the specific user when using either bob.github.com or 
+alice.github.com. But there is a trick (or a bug if you are a half empty glass person), and the person who will 
+commit will be the one configure in the git configuration.
+
+h3. Configure git
+
+There two ways for configuring git : either globally or project specific. And because we use two certificates, it has 
+to be project specific. To configure Alice in a git project you have to type the following commands, go to the project
+folder and type : 
+<pre><code>$ git config user.name "Alice In Wonderland"
+$ git config user.email "alice@wonderland.com"
+</code></pre>
+
+For more infos, check "the git book":http://book.git-scm.com/2_setup_and_initialization.html
+
+h3. That's it
+
+Well here you are, you have everything you might need to use multiples github accounts at once. Please leave a comment,
+if you have errors or a better solution.
