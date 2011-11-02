@@ -2,5 +2,8 @@
 layout: default
 ---
 <section class="post">
+<span class="pubdate">
+  <data itemprop="pubdate" value="{{page.date}}">{{page.date | date_to_string}}</data>
+</span>
 {{ content }}
 </section>

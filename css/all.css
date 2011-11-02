@@ -14,7 +14,7 @@ p {
   margin-bottom : 1.5em
 }
 ul, ol{
-  padding-bottom : 2.4em;
+  padding-bottom : 1.2em;
   list-style-type:none;
 }
 h1, h2, h3 {
@@ -30,6 +30,9 @@ h2 {
 h1 {
   font-size : 6.4em;
 }
+pre{
+  font-size:1.3em;
+}
 
 a{
   text-decoration:none;
@@ -44,9 +47,10 @@ a:hover{
 }
 
 body {
-  width:300px;
+  width:400px;
   background:#FFF;
   min-height:100%;
+  border-right :0.5em solid  #00A0B0
 }
 
 .social li{
@@ -57,3 +61,14 @@ body {
   /*font-size: 75%;*/
 }
 
+.pubdate {
+  display:block;
+  text-align:right;
+  margin-bottom: 1em;
+}
+
+.pubdate > data{
+  background-color : #00A0B0;
+  color : white;
+  padding : 0.5em;
+}
