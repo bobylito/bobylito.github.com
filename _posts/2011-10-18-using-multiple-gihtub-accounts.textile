@@ -5,7 +5,7 @@ title: Github with multiple accounts
 
 h2. Using github with multiple accounts
 
-Nowadays having a github account is quite convenient (if not mandatory for some). It really helps show where are your skill to potential employers or future clients. The only problem is that when you finally got hired by this dream company who has looked for you on Github, you realize they use Github too. Therefore you might be wondering if you should use your very own/personnal account. 
+Nowadays having a github account is quite convenient (if not mandatory for some). It really helps show where are your skill to potential employers or future clients. The only problem is that when you finally got hired by this dream company who has looked for you on Github, you realize they use Github too. Therefore you might wonder if you should use your very own/personnal account. 
 
 I decided to open a distinct account for this purpose. And here is my personnal recipe to use both accounts on my computer. 
 
@@ -13,7 +13,7 @@ Disclaimer : I use MacOS X and Linux, and I don't have a clue how it could work 
 
 h3. SSH Keys
 
-I'll assume here you already have keys and their public parts are both registered on your github accounts. Let's say, we have the following in our ~/.ssh folder :
+I'll assume here you already have keys and their public parts and they are both registered on your github accounts. Let's say, we have the following in our ~/.ssh folder :
 <pre><code>config
 id_rsa_alice
 id_rsa_alice.pub
@@ -21,8 +21,7 @@ id_rsa_bob
 id_rsa_bob.pub
 </code></pre>
 
-Now let's edit the config file. We are adding some url specific configuration: 
-
+Now let's edit the _config_ file. We are adding some url specific configuration : 
 <pre><code>Host alice.github.com
   Hostname github.com
   User git 
@@ -37,7 +36,7 @@ These lines actually make automatic redirection to github to the specific user w
 
 h3. Configure git
 
-There two ways for configuring git : either globally or project specific. And because we use two certificates, it has to be project specific. To configure Alice in a git project you have to type the following commands, go to the project folder and type : 
+There are two ways for configuring git : either globally or project specific. And because we use two certificates, it has to be project specific. To configure Alice in a git project you have to type the following commands, go to the project folder and type : 
 <pre><code>$ git config user.name "Alice In Wonderland"
 $ git config user.email "alice@wonderland.com"
 </code></pre>
