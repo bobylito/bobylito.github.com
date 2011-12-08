@@ -32,7 +32,18 @@ Host bob.github.com
   IdentityFile ~/.ssh/id_rsa_bob
 </code></pre>
 
-These lines actually make automatic redirection to github to the specific user when using either bob.github.com or alice.github.com. But there is a trick (or a bug if you are a half empty glass person), and the person who will commit will be the one configure in the git configuration.
+These lines actually make automatic redirection to github to the specific user when using either bob.github.com or alice.github.com. 
+
+For example, when you want to clone a repository with Bob account, instead of using:
+<pre><code>git clone git@github.com:bob/bobsproject.git</code></pre>
+
+You should use :
+<pre><code>git clone git@bob.github.com:bob/bobsproject.git</code></pre>
+
+The same way, when configuring an origin for an Alice project, it be should set this way:
+<pre><code>git remote add origin git@alice.github.com:alice/p1.git</code></pre>
+
+But there is a trick (or a bug if you are a half empty glass person), and the person who will commit will be the one configure in the git configuration.
 
 h3. Configure git
 
