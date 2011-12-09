@@ -1,1 +1,3 @@
 Bobylito homepage
+
+It is structurally very inspired from Mojombo's blog https://github.com/mojombo/mojombo.github.com 
