@@ -33,7 +33,6 @@ h1 {
 pre{
   font-size:1.3em;
 }
-
 a{
   text-decoration:none;
   color:#00A0B0;
@@ -45,13 +44,16 @@ a{
 a:hover{
   color: #CC333F;
 }
-
 body {
   width:400px;
   background:#FFF;
   min-height:100%;
   border-right :0.5em solid  #00A0B0
 }
+iframe{
+  border:none;
+}
+
 
 .social li{
   display:inline;

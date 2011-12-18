@@ -10,7 +10,7 @@ title: Alexandre Stanislawski
 <section class="make">
 <h2>My toys</h2>
 <ul>
-  <li><a href="/little-shooter/">Little shooter (JS/canvas)</a></li>
+  <li><a href="http://bobylito.github.com/little-shooter/" class="toy" data-width="580px" data-height="650px">Little shooter (JS/canvas)</a></li>
 </ul>
 </section>
 
@@ -21,8 +21,93 @@ title: Alexandre Stanislawski
   <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-</section>
+</section>`
 
+<style>
+  #toyFrame{
+    position:fixed;
+    top:20px;
+    transition:left 500ms;
+    -webkit-transition:left 500ms;
+    -moz-transition:left 500ms;
+    z-index:-1;
+  }
+  .toyIn{
+    left:500px;
+  }
+  .toyOut{
+    left:-1000px;
+  }
+</style>
+
+<script src="js/underscore-1.2.3.min.js"></script>
 <script type="text/javascript">
+  document.querySelectorAll && 
+  (function(_){
+    "use strict";
+    var toys = document.querySelectorAll("a.toy"),
+        iframe = (function initFrame(){
+                var d = document.createElement("iframe");
+                d.id = "toyFrame";
+                d.className = "toyOut";
 
+                (function(d){ 
+                  var transitionEnd = ['webkitTransitionEnd', 'transitionend', 'oTransitionEnd', 'msTransitionEnd',  'transitionEnd'];
+                  d.removeTransitionEndEventListener = function(f){
+                    _.each(transitionEnd, function(eventName){
+                      d.removeEventListener(eventName, f);
+                    }); 
+                  };
+                  d.addTransitionEndEventListener = function(f){
+                    _.each(transitionEnd, function(eventName){
+                      d.addEventListener(eventName, f);
+                    }); 
+                  };
+                })(d);
+                
+                d.hide = function hide(callback){
+                  var f = function(e){
+                    d.removeTransitionEndEventListener(f);
+                    d.src="about:blank";
+                    if(callback){callback();}
+                  };
+                  d.addTransitionEndEventListener(f);
+                  d.className = "toyOut";
+                };
+
+                d.showLink = function sl(url, height, width){
+                  if(d.src===url){
+                    d.hide();
+                    return;
+                  }
+                  else if(d.className==="toyIn"){
+                    d.hide(function(){
+                      d.showLink(url, height, width);
+                    });
+                    return;
+                  }
+                  d.src=url;
+                  d.className="toyIn";
+                  d.height= height;
+                  d.width= width;
+                }
+
+                return d;
+            })();        
+            
+    document.body.appendChild(iframe);
+
+    function clickListener(evt){
+      var e = evt.target,
+          uri = e.href,
+          h = e.dataset.height || "300px",
+          w = e.dataset.width || "300px";
+      evt.preventDefault();
+      iframe.showLink(e.href, h, w);   
+    }
+
+    _(toys).each(function(e){
+      e.addEventListener("click", clickListener);
+    });
+  })(_);
 </script>
