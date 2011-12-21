@@ -36,10 +36,10 @@ pre{
 a{
   text-decoration:none;
   color:#00A0B0;
-  -moz-transition: color 500ms;
-  -o-transition: color 500ms;
-  -webkit-transition: color 500ms;
-  transition: color 500ms;
+  -moz-transition: color 500ms, background-position 400ms;
+  -o-transition: color 500ms, background-position 400ms;
+  -webkit-transition: color 500ms, background-position 400ms;
+  transition: color 500ms, background-position 400ms;
 }
 a:hover{
   color: #CC333F;
@@ -73,4 +73,16 @@ iframe{
   background-color : #00A0B0;
   color : white;
   padding : 0.5em;
+}
+
+a.toy{
+  display:block;
+  background-image: url("/images/fleche.png");
+  background-repeat: no-repeat;
+  background-position:-500px;
+  width:300px;
+}
+a.toy:hover{
+  background-position:-485px;
+  color:#00A0B0;
 }

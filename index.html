@@ -28,8 +28,8 @@ title: Alexandre Stanislawski
     position:fixed;
     top:20px;
     transition:left 500ms;
-    -webkit-transition:left 500ms;
-    -moz-transition:left 500ms;
+    -webkit-transition:left 400ms;
+    -moz-transition:left 400ms;
     z-index:-1;
   }
   .toyIn{
@@ -73,6 +73,7 @@ title: Alexandre Stanislawski
                   };
                   d.addTransitionEndEventListener(f);
                   d.className = "toyOut";
+                  _(toys).each(function(e){e.style.backgroundPosition = ""; e.style.color=""});
                 };
 
                 d.showLink = function sl(url, height, width){
@@ -103,6 +104,8 @@ title: Alexandre Stanislawski
           h = e.dataset.height || "300px",
           w = e.dataset.width || "300px";
       evt.preventDefault();
+      e.style.backgroundPosition = "-200px";
+      e.style.color = "#FFF";
       iframe.showLink(e.href, h, w);   
     }
 
