@@ -11,6 +11,7 @@ title: Alexandre Stanislawski
 <h2>My toys</h2>
 <ul>
   <li><a href="http://bobylito.github.com/little-shooter/" class="toy" data-width="510px" data-height="555px">Little shooter (JS/canvas)</a></li>
+  <li><a href="http://bobylito.github.com/jsPlot/" class="toy" data-width="555px" data-height="600px">jsPlot (JS/canvas)</a></li>
 </ul>
 </section>
 
@@ -76,14 +77,14 @@ title: Alexandre Stanislawski
                   _(toys).each(function(e){e.style.backgroundPosition = ""; e.style.color=""});
                 };
 
-                d.showLink = function sl(url, height, width){
+                d.showLink = function sl(target, url, height, width){
                   if(d.src===url){
                     d.hide();
                     return;
                   }
                   else if(d.className==="toyIn"){
                     d.hide(function(){
-                      d.showLink(url, height, width);
+                      d.showLink(target, url, height, width);
                     });
                     return;
                   }
@@ -91,6 +92,8 @@ title: Alexandre Stanislawski
                   d.className="toyIn";
                   d.height= height;
                   d.width= width;
+                  target.style.backgroundPosition = "-200px";
+                  target.style.color = "#FFF";
                 }
 
                 return d;
@@ -104,9 +107,7 @@ title: Alexandre Stanislawski
           h = e.dataset.height || "300px",
           w = e.dataset.width || "300px";
       evt.preventDefault();
-      e.style.backgroundPosition = "-200px";
-      e.style.color = "#FFF";
-      iframe.showLink(e.href, h, w);   
+      iframe.showLink(e, e.href, h, w);   
     }
 
     _(toys).each(function(e){
