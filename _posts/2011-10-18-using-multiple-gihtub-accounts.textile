@@ -57,3 +57,16 @@ For more information, check "the git book":http://book.git-scm.com/2_setup_and_i
 h3. That's it
 
 Well here you are, you have everything you need to know to use multiple github accounts. Please leave a comment, if you find any mistakes or you come up with a better solution.
+
+h3. Update from <a href="http://news.ycombinator.com/item?id=3332459">Legion comment on HackerNews</a>
+
+In the .ssh/config file : it is not mandatory to use FQDN pattern for ssh names, this means we could have used aliceGH instead of alice.github.com
+
+The same way, we specify the user in the configuration so when configuring the origin of a git repository, we could simply use : 
+<pre><code>git clone bob.github.com:bob/bobsproject.git</code></pre>
+
+or if we add the origin after :
+<pre><code>git remote add origin alice.github.com:alice/p1.git</code></pre>
+
+and last but not least the .git part is useless, and we can use : 
+<pre><code>git remote add origin alice.github.com:alice/p1</code></pre>
