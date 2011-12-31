@@ -70,19 +70,24 @@ document.querySelectorAll &&
                   });
                   return;
                 }
-                d.src=url;
-                d.height= height;
-                d.width= width;
-                
-                setTimeout(function(){
+
+                target.className = "toy toyLoading";
+// This callback is for waiting for the iframe to load
+                function a(){
+                  d.removeEventListener("load", a)
+                  target.className = "toy";
                   d.className="toyIn";
 // Style attribute has a higher priority in css so it overrides the css class properties
                   target.style.backgroundPosition = "-200px";
                   target.style.color = "#FFF";
-                }, 0);
-                
-              }
+                }
+// Load is the event we want to listen to directly on the iframe
+                d.addEventListener("load", a, false);
 
+                d.src=url;
+                d.height= height;
+                d.width= width;
+              }
               return d;
           })();        
           
