@@ -9,18 +9,21 @@ Yesterday took place the second edition of DemoJS, the web-only demoparty.
 Being part of the organizing team but not being a demoscener myself, I was really eager to do something for the demo contest. 
 The problem is I failed in preparing a real demo before the demoparty so let's just say I didn't really have any hope of starting demos this year. 
 
-Hopefully, I stood up all night (you know being part of the organization team etc) so I started hacking near by my friend @phillipeAntoine, who was tinkering on his yet to be released canvas + css demo. 
+Hopefully, I stood up all night (you know being part of the organization team etc) so I started hacking near by my friend "@phillipeAntoine":https://twitter.com/PhilippeAntoine, who was tinkering on his yet to be released canvas + css demo. 
 After a while, his experiment really started to make me think of a few way to exploit css in demos and I started "this demo":http://bobylito.me/wayofcss which is a 1k demo.
 
 With this article, I want to share with you what I learned from this experiment. Really, do not try this at -home- +work+ or small kittens will die. All of this is for the purpose of science.
 
 h3. Markup generation 
 
-The problem is the markup, not the CSS. HTML is very verbose even for small stuff. That's why this demo uses some javascript to generate markup. This way, I am able to compose from a simple string lots of elements that will be used as part of the animation. The recipe : 
+HTML being very verbose even for small stuff, the solution is to generate it. That's why this demo uses some javascript. 
+
+The recipe : 
 
 # take a sentence 
-# split it et get an array
-# apply a function on each element (here forEach but map would have saved me some characters) 
+# split it and get an array
+# for each element generate a dom element
+# and add it to the body
 
 In action : 
 
@@ -83,4 +86,4 @@ bc. document.getElementById("z").className='s'
 
 h3. Final word 
 
-The code is ugly, the demo is not very impressive but when looking back, it does contain some stuff, I hope, you find instructing :D
+The code is ugly, the demo is not very impressive but when looking back, it does contain some stuff which are quite fun to use and combine.
