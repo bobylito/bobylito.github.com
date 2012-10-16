@@ -10,7 +10,7 @@ p, li, th, td {
   font-size : 1.6em;
   line-height : 1.5em;
 }
-p {
+p, pre {
   margin-bottom : 1.5em
 }
 ul, ol{
