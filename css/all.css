@@ -89,3 +89,7 @@ a.toy:hover{
   background-position:-485px;
   color:#00A0B0;
 }
+
+#disqus_thread p {
+  font-size: 0.9em;
+}
