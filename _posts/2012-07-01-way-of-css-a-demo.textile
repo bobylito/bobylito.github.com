@@ -27,7 +27,7 @@ The recipe :
 
 In action : 
 
-{% highlight JavaScript %}
+{% highlight javascript %}
 "Hi DemoJS partiers and orga! Thx 4 being awesome! CSS 
 rulez! 1k is not much and yet enough. \\o/".split(" ")
 .map(function(e){
@@ -88,7 +88,7 @@ h3. ID as variable name
 
 In JS, you can use directly the id of a dom element like a variable. We can then do : 
 
-{% highlight JavaScript %}
+{% highlight javascript %}
 z.className='s'
 {% endhighlight %}
 
