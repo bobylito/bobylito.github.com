@@ -16,9 +16,11 @@ document.querySelectorAll &&
   var toys = document.querySelectorAll("a.toy"),
 // Let's create the iframe
       iframe = (function initFrame(){
-              var d = document.createElement("iframe");
+              var iframe  = document.createElement("iframe"),
+                  d       = document.createElement("div");
               d.id = "toyFrame";
               d.className = "toyOut";
+              d.appendChild(iframe);
 
 // To be really cross browser on the transitionEnd event, we need to attach the same handler to multiple events.
               (function(d){ 
@@ -45,7 +47,7 @@ document.querySelectorAll &&
               d.hide = function hide(callback){
                 var f = function(e){
                   d.removeTransitionEndEventListener(f);
-                  d.src="about:blank";
+                  iframe.src="about:blank";
                   if(callback){
 // Let the browser breath for a sec...
                     setTimeout(callback, 0);
@@ -57,16 +59,16 @@ document.querySelectorAll &&
                 _(toys).each(function(e){e.style.backgroundPosition = ""; e.style.color=""});
               };
 
-              d.showLink = function sl(target, url, height, width){
+              d.showLink = function sl(target, url){
 // If the link clicked is the same as the one currently shown hide the frame
-                if(d.src===url){
+                if(iframe.src===url){
                   d.hide();
                   return;
                 }
 // if the frame is out, hide it and then open the newly clicked link
                 else if(d.className==="toyIn"){
                   d.hide(function(){
-                    d.showLink(target, url, height, width);
+                    d.showLink(target, url);
                   });
                   return;
                 }
@@ -74,7 +76,7 @@ document.querySelectorAll &&
                 target.className = "toy toyLoading";
 // This callback is for waiting for the iframe to load
                 function a(){
-                  d.removeEventListener("load", a)
+                  iframe.removeEventListener("load", a)
                   target.className = "toy";
                   d.className="toyIn";
 // Style attribute has a higher priority in css so it overrides the css class properties
@@ -82,11 +84,9 @@ document.querySelectorAll &&
                   target.style.color = "#FFF";
                 }
 // Load is the event we want to listen to directly on the iframe
-                d.addEventListener("load", a, false);
+                iframe.addEventListener("load", a, false);
 
-                d.src=url;
-                d.height= height;
-                d.width= width;
+                iframe.src    = url;
               }
               return d;
           })();        
@@ -102,7 +102,7 @@ document.querySelectorAll &&
         w = e.dataset.width || "300px";
 // We don't want clicking on the link to open the link...
     evt.preventDefault();
-    iframe.showLink(e, e.href, h, w);   
+    iframe.showLink(e, e.href);   
   }
 
 // Attach the handler to all toys links

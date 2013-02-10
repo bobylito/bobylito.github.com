@@ -27,13 +27,15 @@ The recipe :
 
 In action : 
 
-bc. "Hi DemoJS partiers and orga! Thx 4 being awesome! CSS 
+{% highlight JavaScript %}
+"Hi DemoJS partiers and orga! Thx 4 being awesome! CSS 
 rulez! 1k is not much and yet enough. \\o/".split(" ")
 .map(function(e){
   a=d.createElement("p");
   a.innerHTML=e;
   d.body.appendChild(a);
 })
+{% endhighlight %}
 
 h3. Delays for the win
 
@@ -41,14 +43,18 @@ Having a bunch of dom element is not very useful, you might argue... But there i
 
 It gives to the css animation a pause after which it'll start. Because the index of the word in the array gives us its position in the sentence, we can then apply a proportionnal delay. This will keep the order and we can apply the same animation with this delay to make the animation.
 
-bc. a.style.webkitAnimation="a 2s "+(i++)+"s 1";
+{% highlight javascript %}
+a.style.webkitAnimation="a 2s "+(i++)+"s 1";
+{% endhighlight %}
 
 h3. The end
 
 The demo use the animationEnd event of each animation to figure out when the last word disapear.
 
-bc. a.addEventListener("webkitAnimationEnd",
-    function(){if(!--i)z.className='s'})
+{% highlight javascript %}
+a.addEventListener("webkitAnimationEnd",
+  function(){if(!--i)z.className='s'})
+{% endhighlight %}
 
 h3. Micro page
 
@@ -56,7 +62,8 @@ Markup in demos should be stripped
 
 Usually a really classic webpage would look like this :
 
-bc. <!DOCTYPE HTML>
+{% highlight html %}
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -67,22 +74,29 @@ bc. <!DOCTYPE HTML>
   <script type="text/javascript"></sc:w
 ript>
 </html>
+{% endhighlight %}
 
 But really you can strip it, without being hurt, to something  like this :
 
-bc. <style></style>
+{% highlight html %}
+<style></style>
 <body>
 <script></script>
+{% endhighlight %}
 
 h3. ID as variable name
 
 In JS, you can use directly the id of a dom element like a variable. We can then do : 
 
-bc. z.className='s'
+{% highlight JavaScript %}
+z.className='s'
+{% endhighlight %}
 
 for a dom element named with 'z' as its id instead of doing so : 
 
-bc. document.getElementById("z").className='s'
+{% highlight javascript %}
+document.getElementById("z").className='s'
+{% endhighlight %}
 
 h3. Final word 
 

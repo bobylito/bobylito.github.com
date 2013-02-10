@@ -11,38 +11,55 @@ title: Alexandre Stanislawski
 <section class="make">
 <h2>My toys</h2>
 <ul>
-  <li><a href="http://bobylito.github.com/little-shooter/" class="toy" data-width="510px" data-height="555px">Little shooter (JS/canvas) </a></li>
-  <li><a href="http://bobylito.github.com/jsPlot/" class="toy" data-width="555px" data-height="600px">plot.js (JS/canvas) </a></li>
-  <li><a href="http://bobylito.github.com/functionXplorer/" class="toy" data-width="600px" data-height="600px">functionXplorer (plot.js/backbone) </a></li>
+  <li><a href="http://bobylito.github.com/little-shooter/" class="toy">Little shooter (JS/canvas) </a></li>
+  <li><a href="http://bobylito.github.com/jsPlot/" class="toy">plot.js (JS/canvas) </a></li>
+  <li><a href="http://bobylito.github.com/functionXplorer/" class="toy">functionXplorer (plot.js/backbone) </a></li>
 </ul>
+</section>
+
+<section class="events">
+<h2>The events where you might see me</h2>
+<ul>
+<li><a href="http://www.parisjs.org">Paris JS</a> (contributor to the organization, occasionnal MC)</li>
+<li><a href="http://www.demojs.org">DemoJS</a> (organization team member since 2011)</li>
+</ul>
+
+
 </section>
 
 <section class="blog">
 <h2>Notes for later</h2>
 <ul>
 {% for post in site.posts %}
-  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a> (<span>{{ post.date | date_to_string }}</span>)</li>
 {% endfor %}
 </ul>
-</section>`
+</section>
 
 <style>
   #toyFrame{
-    position:fixed;
-    top:20px;
-    transition:opacity 500ms;
-    -webkit-transition:opacity 500ms;
-    -moz-transition:opacity 500ms;
-    z-index:-1;
-    left:500px;
+    position          : absolute;
+    top               : 50px;
+    height            : 600px;
+    transition        : left 500ms 300ms;
+    -webkit-transition: left 500ms 300ms;
+    -moz-transition   : left 500ms 300ms;
+    z-index           : -1;
+    padding           : 5px;
+    background        : #333;
+    width             : 600px;
+  }
+  #toyFrame iframe {
+    width :590px;
+    height:590px;
   }
   .toyIn{
-    opacity:1;
+    left : 600px;
   }
   .toyOut{
-    opacity:0;
+    left: 0;
   } 
 </style>
 
 <script src="js/underscore-1.2.3.min.js"></script>
-<script src="js/index.min.js"></script>
+<script src="js/index.js"></script>

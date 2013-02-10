@@ -1,40 +1,41 @@
 <!doctype html>
 <html>
 <head>
+  <!-- 
+  Font Awesome - http://fortawesome.github.com/Font-Awesome
+  Font Awesome More - http://gregoryloucas.github.com/Font-Awesome-More
+  -->
   <title>Bobylito.me</title>
+  <link rel="stylesheet" href="/css/font-awesome.css" /> 
   <link rel="stylesheet" href="/css/all.css" /> 
+  <link rel="stylesheet" href="/css/syntax_manni.css" /> 
   <link rel="alternate" href="http://feeds.feedburner.com/Bobylito" title="Bobylito" type="application/atom+xml"/>
 </head>
 <body>
-  <header>
-    <h1><a href="/">Bobylito</a></h1>
-    <ul class="social">
-      <li><a href='http://www.twitter.com/bobylito'><img src="/images/twitter.png" alt="Me on twitter"/></a></li>
-      <li><a href='http://www.last.fm/user/takyon'><img src="/images/lastfm.png" alt="Last fm profile"/></a></li>
-      <li><a href='http://www.flickr.com/photos/don_bobylito/'><img src="/images/flickr.png" alt="Some photos on flickr"/></a></li>
-      <li><a href='http://www.github.com/bobylito'><img src="/images/github.ico" alt="Moar code on github"/></a></li>
-      <li><a href='http://bobylito.tumblr.com'><img src="/images/tumblr.png" alt="Randomish stuff on tumblr"/></a></li>
-      <li><a href='http://www.twitter.com/bobylito'><img src="/images/facebook.png" alt="Sorry..."/></a></li>
+  <header><h1><a href="/">Bobylito</a></h1><ul class="social">
+      <li><a target="_blank" href='http://www.twitter.com/bobylito'><i class="icon-twitter"></i></a></li>
+      <li><a target="_blank" href='http://www.github.com/bobylito'><i class="icon-github"></i></a></li>
+      <li><a target="_blank" href='http://lnkd.in/pGpKxY'><i class="icon-linkedin"></i></a></li>
+      <li><a target="_blank" href='http://www.last.fm/user/takyon'><i class="icon-lastfm"></i></a></li>
+      <li><a target="_blank" href='http://www.flickr.com/photos/don_bobylito/'><i class="icon-flickr"></i></a></li>
+      <li><a target="_blank" href='http://pinterest.com/bobylito'><i class="icon-pinterest"></i></a></li>
+      <li><a target="_blank" href='http://www.facebook.com/bobylito'><i class="icon-facebook"></i></a></li>
     </ul>
   </header>
 
   {{ content }}
 
-  <footer>
-  The social media icons are from <a href="http://www.komodomedia.com">Komodo Media</a>, except the one for Github wich is their own favicon.
-  </footer>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27607140-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 </body>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-27607140-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
 </html>
