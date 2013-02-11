@@ -5,16 +5,15 @@ title  : Binding worlds
 
 h2. Binding worlds using Scala/Play/Javascript
 
-Today's sample project is all about using existing bricks, adding  glue and let the magic happen. But be careful, I'm using cool stuff and wonderful pieces of tech but I don't intend to explain them by the menu.
+Today's sample project is all about using existing bricks, adding glue and letting the magic happen. But be careful, I'm using cool stuff and wonderful pieces of tech but I don't intend to explain them by the menu.
 
-So ok, I have a project, it is wonderful and awesome and... Let's stop there and explain a bit further. It is a server which reads its standard input and stream that to a webpage it is also serving. The idea of this POC server is to bind command line tool and a web server, in order to do something like this :
-
+So ok, I have a project, it is wonderful and awesome and... Let's stop there and explain a bit further. It is a server which reads its *standard input* and streams that to a webpage *it is also serving*. The idea of this POC server is to bind command line tool and a web server, in order to do something like this :
 
 {% highlight sh %}
 $> tail -f apache_access_log | webPipe 
 {% endhighlight %}
 
-This outputs the content of the Apache access log to the web through server sent events as the file log grows.
+This outputs the content of the Apache access log to the web through server sent events as the file log grows. By the way, the _webPipe_ command is an alias to the command that launches the server.
 
 The code is in Scala and uses Play 2.1. It also contains just the right amount of javascript code (for the size of this project).
 
@@ -38,7 +37,7 @@ This returns a brand new "scala.collection.Iterator[String]":http://www.scala-la
 
 h3. Enumerate the input
 
-The internals of Play2 don't play along with Iterators. They use other data structures for having non blocking, reactive processing. For more infos on this subject, I would recommend you to read "Mandubian's article":http://mandubian.com/2012/08/27/understanding-play2-iteratees-for-normal-humans (it is not mandatory to read it to understand the rest of this post though)
+The internals of Play2 don't play along with Iterators. They use other data structures for having non blocking, reactive processing. For more infos on this subject, I would recommend that you read "Mandubian's article":http://mandubian.com/2012/08/27/understanding-play2-iteratees-for-normal-humans (it is not mandatory to read it to understand the rest of this post though)
 
 Long story short, we introduced a new function to the Enumerator object that actually give the ability to take any _TraversableOnce_ (which represents any kinds of stuff you might want to iterate on) and transform it to an Enumerator, which is what Play understands.
 

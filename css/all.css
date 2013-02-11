@@ -88,6 +88,10 @@ hr{
   margin-top: 3em;
   margin-bottom: 3em;
 }
+strong {
+  color       : #ee3333;
+  font-weight : normal;
+}
 
 .social {
   position      : absolute;
