@@ -15,6 +15,8 @@ $> tail -f apache_access_log | webPipe
 
 This outputs the content of the Apache access log to the web through server sent events as the file log grows. By the way, the _webPipe_ command is an alias to the command that launches the server.
 
+!/images/webpipeinaction_mini.png(Webpipe)!:/images/webpipeinaction.png
+
 The code is in Scala and uses Play 2.1. It also contains just the right amount of javascript code (for the size of this project).
 
 The project code is "here":https://github.com/bobylito/webPipe (we'll go directly to the specific parts during the article).
