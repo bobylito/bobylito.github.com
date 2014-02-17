@@ -7,19 +7,20 @@
 html{
   font-size   : 62.5% ; 
   font-family : 'Open Sans', sans-serif;
-  background  : #F1FFFD;
+  background  : #70CFC2;
   height      : 100%;
   padding     : 1em 2em;
+  background-image : url("/images/dimension.png");
 }
 p, li, th, td {
-  font-size   : 1.6em;
-  line-height : 1.5em;
+  font-size   : 1.5em;
+  line-height : 1.8em;
 }
 p, pre {
   margin-bottom : 0.8em;
 }
 p{
-  text-align : justify;
+  text-align : left;
 }
 ol, ul {
   padding-bottom : 1.2em;
@@ -27,6 +28,16 @@ ol, ul {
 }
 ul{
   list-style-type: disc;
+  margin-left : 0;
+}
+ul.menu{
+  list-style-type:none;
+}
+ul.menu li{
+  margin-left : -5px;
+}
+ul.menu li a{
+  padding-left : 5px;
 }
 h1{
   font-family : 'Syncopate', sans-serif;
@@ -34,10 +45,10 @@ h1{
 h1, h2, h3, h4 {
   font-weight : normal;
   line-height : 1.5em;
+  margin-bottom : 0.6em;
 }
 h3 {
-  font-size       : 1.6em;
-  text-decoration : underline;
+  font-size       : 2em;
 }
 h4 {
   font-size : 1.2em;
@@ -69,8 +80,8 @@ a:hover{
 body {
   position      : absolute;
   width         : 601px;
-  background    : #FFF;
-  min-height    : 700px;
+  background    : rgba(255, 255, 255, 0.5);
+  min-height    : 90%;
   border        : 1px solid #eee;
   padding       : 0 5px;
   border-radius : 5px;
@@ -96,7 +107,7 @@ strong {
   top           : -1px;
   right         : -6px;
   padding       : 5px 5px 0;
-  background    : #F1FFFD;
+  background    : rgba(255, 255, 255, 0.7);
   border        : 1px solid #eee;
   border-top    : 1px solid #f1fffd;
   border-right  : 1px solid #f1fffd;
@@ -121,7 +132,7 @@ strong {
 
 .pubdate {
   text-align: right;
-  background: #f8f8f8;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
   padding   : 0.5em 0;
 }
 
