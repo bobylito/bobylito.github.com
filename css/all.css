@@ -10,7 +10,9 @@ html{
   background  : #70CFC2;
   height      : 100%;
   padding     : 1em 2em;
-  background-image : url("/images/dimension.png");
+/*  background-image : url("/images/dimension.png"); */
+  background: linear-gradient(to bottom right, rgba(112, 207, 194, 0.59) 50%, #70CFC2 50%);
+  background-size: 10px 10px;
 }
 p, li, th, td {
   font-size   : 1.5em;
@@ -84,7 +86,7 @@ body {
   min-height    : 90%;
   border        : 1px solid #eee;
   padding       : 0 5px;
-  border-radius : 5px;
+  border-radius : 10px 0 10px 10px;
 }
 body > * {
   position : relative;
