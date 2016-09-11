@@ -1,4 +1,4 @@
-markdown: rdiscount
-pygments: true
-redcloth: 
-  hard_breaks: false
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+  hard_wrap: false

@@ -7,23 +7,28 @@
   -->
   <title>Bobylito.me</title>
   <link rel="stylesheet" href="/css/font-awesome.css" /> 
-  <link rel="stylesheet" href="/css/all.css" /> 
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/index.css" /> 
   <link rel="stylesheet" href="/css/syntax_github.css" /> 
   <link rel="alternate" href="http://feeds.feedburner.com/Bobylito" title="Bobylito" type="application/atom+xml"/>
 </head>
 <body>
-  <header><h1><a href="/">Bobylito</a></h1><ul class="social">
-      <li><a target="_blank" href='http://www.twitter.com/bobylito'><i class="icon-twitter"></i></a></li>
-      <li><a target="_blank" href='http://www.github.com/bobylito'><i class="icon-github"></i></a></li>
-      <li><a target="_blank" href='http://lnkd.in/pGpKxY'><i class="icon-linkedin"></i></a></li>
-      <li><a target="_blank" href='http://www.last.fm/user/takyon'><i class="icon-lastfm"></i></a></li>
-      <li><a target="_blank" href='http://www.flickr.com/photos/don_bobylito/'><i class="icon-flickr"></i></a></li>
-      <li><a target="_blank" href='http://pinterest.com/bobylito'><i class="icon-pinterest"></i></a></li>
-      <li><a target="_blank" href='http://www.facebook.com/bobylito'><i class="icon-facebook"></i></a></li>
+  <header>
+    <h1 class="logo"><a href="/">Bobylito</a></h1>
+    <ul class="social">
+      <li class="link"><a target="_blank" href='http://www.twitter.com/bobylito'><i class="icon-twitter"></i></a></li>
+      <li class="link"><a target="_blank" href='http://www.github.com/bobylito'><i class="icon-github"></i></a></li>
+      <li class="link"><a target="_blank" href='http://lnkd.in/pGpKxY'><i class="icon-linkedin"></i></a></li>
+      <li class="link"><a target="_blank" href='http://www.last.fm/user/takyon'><i class="icon-lastfm"></i></a></li>
+      <li class="link"><a target="_blank" href='http://www.flickr.com/photos/don_bobylito/'><i class="icon-flickr"></i></a></li>
+      <li class="link"><a target="_blank" href='http://pinterest.com/bobylito'><i class="icon-pinterest"></i></a></li>
+      <li class="link"><a target="_blank" href='http://www.facebook.com/bobylito'><i class="icon-facebook"></i></a></li>
     </ul>
   </header>
 
-  {{ content }}
+  <div class="container">
+    {{ content }}
+  </div>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -36,6 +41,5 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-
 </body>
 </html>

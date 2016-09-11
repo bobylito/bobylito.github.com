@@ -1,0 +1,23 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Gilda Display', serif;
+
+  * {
+    font-family: inherit;
+  }
+}
+
+pre {
+  font-family: 'inconsolata', monospace;
+
+  * {
+    font-family: inherit;
+  }
+}
+
+a {
+  color: $link;
+}

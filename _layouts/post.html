@@ -2,10 +2,11 @@
 layout: default
 ---
 <article class="post">
-<div class="pubdate">
-  <data itemprop="pubdate" value="{{page.date}}">{{page.date | date_to_string}}</data>
-</div>
-{{ content }}
+  <h2>{{page.title}}</h2>
+  <div class="pubdate">
+    <data itemprop="pubdate" value="{{page.date}}">{{page.date | date_to_string}}</data>
+  </div>
+  {{ content }}
 </article>
 
 <hr/>

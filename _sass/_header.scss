@@ -1,0 +1,23 @@
+header {
+  text-align: center;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .logo {
+    font-size: 39px;
+    margin: 0;
+  }
+
+  .social {
+    list-style-type: none;
+    padding: 0;
+    margin: 0px 0 0 0;
+    font-size: 24px;
+    .link {
+      display: inline-block;
+    }
+  }
+}
