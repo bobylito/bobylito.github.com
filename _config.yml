@@ -1,4 +1,0 @@
-markdown: rdiscount
-pygments: true
-redcloth: 
-  hard_breaks: false
