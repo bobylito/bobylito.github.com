@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Way of css, a demo.
+description: Demoscene will never die. A humble attempt to bring my piece.
 pubDatetime: 2012-07-01
 tags:
   - javascript

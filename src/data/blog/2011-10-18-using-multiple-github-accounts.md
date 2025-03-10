@@ -1,5 +1,6 @@
 ---
 title: How to use mulitple GitHub accounts
+description: Sometime you may need to do something that is not completely obvious, nor recommended. This guide is one of those things.
 pubDatetime: 2011-10-18
 tags:
   - git
