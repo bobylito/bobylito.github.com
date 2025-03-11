@@ -1,0 +1,26 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import TalkDetails from "@/layouts/TalkDetails.astro";
+
+export interface Props {
+  post: CollectionEntry<"talks">;
+}
+
+export async function getStaticPaths() {
+  const talks = await getCollection("talks");
+
+  const postResult = talks.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+
+  return postResult;
+}
+
+const { post } = Astro.props;
+
+const posts = await getCollection("talks");
+const sortedPosts = posts.sort((a,b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime())
+---
+
+<TalkDetails post={post} posts={sortedPosts} />

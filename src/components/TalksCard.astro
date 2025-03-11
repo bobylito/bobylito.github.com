@@ -1,11 +1,11 @@
 ---
 import { slugifyStr } from "@/utils/slugify";
+import type { CollectionEntry } from "astro:content";
 import Datetime from "./Datetime.astro";
-import type { CommonContent } from '@/content.config'
 
 export interface Props {
   href?: string;
-  frontmatter: CommonContent,
+  frontmatter: CollectionEntry<"blog">["data"];
   secHeading?: boolean;
 }
 
