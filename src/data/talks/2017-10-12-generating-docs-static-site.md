@@ -12,3 +12,5 @@ pubDatetime: 2017-10-12
 ---
 
 Since the mid-90's not much have changed on the documentation generator space. Tools like javadoc are still equal to themselves useful but not very flexible. Let's see what we can now do by mixing both documentation generators and static website generators.
+
+https://www.youtube.com/watch?v=telqv6Nd2e4
