@@ -69,4 +69,8 @@ html[data-theme="dark"] {
       }
     }
   }
+
+  img {
+    background-color: white;
+  }
 }
