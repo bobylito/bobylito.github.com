@@ -93,7 +93,7 @@ import loadGoogleFonts from "../loadGoogleFont";
 //       </div>
 //     </div>`;
 
-export default async (post) => {
+export default async post => {
   return satori(
     {
       type: "div",

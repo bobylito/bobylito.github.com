@@ -19,14 +19,7 @@ export interface Props {
 
 const { post, posts } = Astro.props;
 
-const {
-  title,
-  description,
-  ogImage,
-  pubDatetime,
-  tags,
-  pdf_file
-} = post.data;
+const { title, description, ogImage, pubDatetime, tags, pdf_file } = post.data;
 
 const { Content } = await render(post);
 
@@ -76,16 +69,16 @@ const nextPost =
       {title}
     </h1>
     <div class="flex items-center gap-4">
-      <Datetime
-        pubDatetime={pubDatetime}
-        size="lg"
-        class="my-2"
-      />
+      <Datetime pubDatetime={pubDatetime} size="lg" class="my-2" />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
       <Content />
-      <div class="flex flex-col items-center w-full">
-        <embed src={pdf_file} class="w-full px-4 h-128" type="application/pdf">
+      <div class="flex w-full flex-col items-center">
+        <embed
+          src={pdf_file}
+          class="h-128 w-full px-4"
+          type="application/pdf"
+        />
       </div>
     </article>
 

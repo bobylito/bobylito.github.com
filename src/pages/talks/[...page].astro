@@ -10,8 +10,8 @@ import Pagination from "@/components/Pagination.astro";
 import { SITE } from "@/config";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const talks = (await getCollection("talks")).sort((a, b) => 
-    b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime()
+  const talks = (await getCollection("talks")).sort(
+    (a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime()
   );
   return paginate(talks, { pageSize: SITE.postPerPage });
 }) satisfies GetStaticPaths;

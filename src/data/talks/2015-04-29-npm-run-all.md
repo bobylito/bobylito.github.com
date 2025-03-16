@@ -1,6 +1,8 @@
 ---
 title: Npm run all
-description: Npm run is the last utility you will need to know when it comes to task automation in your web project!
+description:
+  Npm run is the last utility you will need to know when it comes to task
+  automation in your web project!
 tags:
   - NPM
   - scripts
