@@ -5,7 +5,7 @@ description: music made for jamuary 2025
 tags: 
  - music
  - jams
- - 2025
+ - "2025"
 ---
 
 In 2025, I participated to the jamuary. This is a yearly event in which during a

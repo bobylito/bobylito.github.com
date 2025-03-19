@@ -13,14 +13,14 @@ const commonContentSchema = z.object({
 export type CommonContent = z.infer<typeof commonContentSchema>;
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.md", base: "./src/data/blog" }),
+  loader: glob({ pattern: "**/[^_]*.md", base: "./data/blog" }),
   schema: ({ image }) =>
     commonContentSchema.extend({
       author: z.string().default(SITE.author),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
       ogImage: image()
-        .refine(img => img.width >= 1200 && img.height >= 630, {
+        .refine((img) => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
         })
         .or(z.string())
@@ -38,13 +38,13 @@ const blog = defineCollection({
 });
 
 const talks = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/talks" }),
+  loader: glob({ pattern: "**/*.md", base: "./data/talks" }),
   schema: ({ image }) =>
     commonContentSchema.extend({
       source_file: z.string().optional(),
       pdf_file: z.string(),
       ogImage: image()
-        .refine(img => img.width >= 1200 && img.height >= 630, {
+        .refine((img) => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
         })
         .or(z.string())
@@ -53,11 +53,11 @@ const talks = defineCollection({
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/projects" }),
+  loader: glob({ pattern: "**/*.md", base: "./data/projects" }),
   schema: ({ image }) =>
     commonContentSchema.extend({
       ogImage: image()
-        .refine(img => img.width >= 1200 && img.height >= 630, {
+        .refine((img) => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
         })
         .or(z.string())
