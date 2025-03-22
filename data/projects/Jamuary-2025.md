@@ -2,6 +2,7 @@
 title: jamuary 2025
 pubDatetime: 2025-02-01
 description: music made for jamuary 2025
+is_finished: true
 tags: 
  - music
  - jams

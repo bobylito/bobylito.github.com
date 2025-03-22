@@ -56,6 +56,7 @@ const projects = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./data/projects" }),
   schema: ({ image }) =>
     commonContentSchema.extend({
+      is_finished: z.boolean().default(false),
       ogImage: image()
         .refine((img) => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
