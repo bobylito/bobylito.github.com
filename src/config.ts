@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://bobylito.me/",
   desc: "Personal website of bobylito",
   title: "Bobylito",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "bobylito-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 5,
   postPerPage: 10,
