@@ -6,6 +6,7 @@ tags:
   - productivity
   - projects
   - nostalgia
+  - gamedev
 cover_image: /covers/joshua-j-cotten-GiAhgAdISFE-unsplash.jpg
 ---
 

@@ -4,7 +4,7 @@ pubDatetime: 2014-05-18
 description: A shoot-em-up written using ReactJS
 is_finished: true
 tags: 
- - video game
+ - gamedev
  - canvas 2D
  - javascript
  - React

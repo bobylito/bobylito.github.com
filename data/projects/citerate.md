@@ -4,7 +4,7 @@ pubDatetime: 2020-07-21
 description: A card based city builder
 is_finished: true
 tags: 
- - video game
+ - gamedev
  - canvas 2D
  - javascript
  - React

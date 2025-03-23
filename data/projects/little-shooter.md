@@ -4,7 +4,7 @@ pubDatetime: 2010-07-01
 description: A shoot-em-up written in JavaScript
 is_finished: true
 tags: 
- - video game
+ - gamedev
  - javascript
  - canvas 2D
 ---
