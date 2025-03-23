@@ -1,10 +1,14 @@
-import type { CollectionEntry } from "astro:content";
+import type { CommonContent } from "@/content.config";
 import getSortedPosts from "./getSortedPosts";
 import { slugifyAll } from "./slugify";
 
-const getPostsByTag = (posts: CollectionEntry<"blog">[], tag: string) =>
-  getSortedPosts(
-    posts.filter(post => slugifyAll(post.data.tags).includes(tag))
+function getPostsByTag<T extends { id: string; data: CommonContent }>(
+  posts: T[],
+  tag: string
+) {
+  return getSortedPosts(
+    posts.filter((post) => slugifyAll(post.data.tags).includes(tag))
   );
+}
 
 export default getPostsByTag;
