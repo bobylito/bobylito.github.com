@@ -1,142 +1,44 @@
 import satori from "satori";
 // import { html } from "satori-html";
 import { SITE } from "@/config";
+import fs from "node:fs/promises";
 import loadGoogleFonts from "../loadGoogleFont";
 
-// const markup = html`<div
-//       style={{
-//         background: "#fefbfb",
-//         width: "100%",
-//         height: "100%",
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//       }}
-//     >
-//       <div
-//         style={{
-//           position: "absolute",
-//           top: "-1px",
-//           right: "-1px",
-//           border: "4px solid #000",
-//           background: "#ecebeb",
-//           opacity: "0.9",
-//           borderRadius: "4px",
-//           display: "flex",
-//           justifyContent: "center",
-//           margin: "2.5rem",
-//           width: "88%",
-//           height: "80%",
-//         }}
-//       />
+const imgPath = "./public/bobylito-blank-og.jpg";
+const image = await fs.readFile(imgPath);
+// convert image file to base64-encoded string
+const base64Image = Buffer.from(image, "binary").toString("base64");
 
-//       <div
-//         style={{
-//           border: "4px solid #000",
-//           background: "#fefbfb",
-//           borderRadius: "4px",
-//           display: "flex",
-//           justifyContent: "center",
-//           margin: "2rem",
-//           width: "88%",
-//           height: "80%",
-//         }}
-//       >
-//         <div
-//           style={{
-//             display: "flex",
-//             flexDirection: "column",
-//             justifyContent: "space-between",
-//             margin: "20px",
-//             width: "90%",
-//             height: "90%",
-//           }}
-//         >
-//           <p
-//             style={{
-//               fontSize: 72,
-//               fontWeight: "bold",
-//               maxHeight: "84%",
-//               overflow: "hidden",
-//             }}
-//           >
-//             {post.data.title}
-//           </p>
-//           <div
-//             style={{
-//               display: "flex",
-//               justifyContent: "space-between",
-//               width: "100%",
-//               marginBottom: "8px",
-//               fontSize: 28,
-//             }}
-//           >
-//             <span>
-//               by{" "}
-//               <span
-//                 style={{
-//                   color: "transparent",
-//                 }}
-//               >
-//                 "
-//               </span>
-//               <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-//                 {post.data.author}
-//               </span>
-//             </span>
+// combine all strings
+const base64ImageStr = `data:image/jpeg;base64,${base64Image}`;
 
-//             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-//               {SITE.title}
-//             </span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>`;
-
-export default async post => {
+export default async (post) => {
   return satori(
     {
       type: "div",
       props: {
         style: {
-          background: "#fefbfb",
+          backgroundImage: `url(${base64ImageStr})`,
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          color: "#e8bcb9",
         },
         children: [
           {
             type: "div",
             props: {
               style: {
-                position: "absolute",
-                top: "-1px",
-                right: "-1px",
-                border: "4px solid #000",
-                background: "#ecebeb",
-                opacity: "0.9",
-                borderRadius: "4px",
-                display: "flex",
-                justifyContent: "center",
-                margin: "2.5rem",
-                width: "88%",
-                height: "80%",
-              },
-            },
-          },
-          {
-            type: "div",
-            props: {
-              style: {
-                border: "4px solid #000",
+                border: "16px solid #000",
                 background: "#fefbfb",
-                borderRadius: "4px",
+                borderRadius: "24px",
                 display: "flex",
                 justifyContent: "center",
-                margin: "2rem",
-                width: "88%",
+                background: "hsla(268, 26%, 25%, 0.7)",
+                margin: "auto",
+                width: "94%",
                 height: "80%",
               },
               children: {
@@ -155,7 +57,7 @@ export default async post => {
                       type: "p",
                       props: {
                         style: {
-                          fontSize: 72,
+                          fontSize: 128,
                           fontWeight: "bold",
                           maxHeight: "84%",
                           overflow: "hidden",
@@ -171,7 +73,7 @@ export default async post => {
                           justifyContent: "space-between",
                           width: "100%",
                           marginBottom: "8px",
-                          fontSize: 28,
+                          fontSize: 56,
                         },
                         children: [
                           {
@@ -208,8 +110,8 @@ export default async post => {
       },
     },
     {
-      width: 1200,
-      height: 630,
+      width: 2400,
+      height: 1260,
       embedFont: true,
       fonts: await loadGoogleFonts(post.data.title + SITE.title + "by"),
     }
