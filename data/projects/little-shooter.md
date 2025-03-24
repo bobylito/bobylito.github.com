@@ -1,5 +1,5 @@
 ---
-title: Little shoort
+title: Little shooter
 pubDatetime: 2010-07-01
 description: A shoot-em-up written in JavaScript
 is_finished: true

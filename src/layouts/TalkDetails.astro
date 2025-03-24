@@ -25,7 +25,7 @@ const { Content } = await render(post);
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/posts/${slugifyStr(title)}/index.png`,
+  ogImageUrl ?? `/talks/${slugifyStr(title)}/index.png`,
   Astro.url.origin
 ).href;
 

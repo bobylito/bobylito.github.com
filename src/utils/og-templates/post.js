@@ -59,10 +59,22 @@ export default async (post) => {
                         style: {
                           fontSize: 128,
                           fontWeight: "bold",
-                          maxHeight: "84%",
+                          maxHeight: "44%",
                           overflow: "hidden",
                         },
                         children: post.data.title,
+                      },
+                    },
+                    {
+                      type: "p",
+                      props: {
+                        style: {
+                          fontSize: 64,
+                          fontWeight: "bold",
+                          maxHeight: "40%",
+                          overflow: "hidden",
+                        },
+                        children: post.data.description,
                       },
                     },
                     {
@@ -113,7 +125,9 @@ export default async (post) => {
       width: 2400,
       height: 1260,
       embedFont: true,
-      fonts: await loadGoogleFonts(post.data.title + SITE.title + "by"),
+      fonts: await loadGoogleFonts(
+        post.data.title + post.data.description + SITE.title + "by"
+      ),
     }
   );
 };
