@@ -12,7 +12,7 @@ export const SITE = {
   showArchives: true,
   showBackButton: true,
   editPost: {
-    url: "https://github.com/bobylito/bobylito.github.com/edit/master/src/data/blog",
+    url: "https://github.com/bobylito/bobylito.github.com/edit/master/data",
     text: "Suggest Changes",
     appendFilePath: true,
   },
