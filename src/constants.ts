@@ -1,9 +1,12 @@
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
+import IconInstagram from "@/assets/icons/IconInstagram.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconMastodon from "@/assets/icons/IconMastodon.svg";
+import IconSoundcloud from "@/assets/icons/IconSoundcloud.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
+import IconYoutube from "@/assets/icons/IconYoutube.svg";
 import { SITE } from "@/config";
 
 export const LOCALE = {
@@ -29,6 +32,24 @@ export const SOCIALS = [
     href: "http://lnkd.in/pGpKxY",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
+  },
+  {
+    name: "SoundCloud",
+    href: "https://soundcloud.com/bobylito/tracks",
+    linkTitle: `${SITE.title} on SoundCloud`,
+    icon: IconSoundcloud,
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/bobylito",
+    linkTitle: `${SITE.title} on YouTube`,
+    icon: IconYoutube,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/bobylito/",
+    linkTitle: `${SITE.title} on Instagram`,
+    icon: IconInstagram,
   },
 ] as const;
 
