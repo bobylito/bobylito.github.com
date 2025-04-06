@@ -33,7 +33,7 @@ const isActive = (path: string) => {
   </a>
   <div
     id="nav-container"
-    class="mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row"
+    class="mx-auto flex max-w-4xl flex-col items-center justify-between sm:flex-row"
   >
     <div
       id="top-nav-wrap"
@@ -71,6 +71,14 @@ const isActive = (path: string) => {
           <li class="col-span-2">
             <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
               Posts
+            </a>
+          </li>
+          <li class="col-span-2">
+            <a
+              href="/projects"
+              class:list={{ "active-nav": isActive("/projects") }}
+            >
+              Projects
             </a>
           </li>
           <li class="col-span-2">

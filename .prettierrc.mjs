@@ -2,6 +2,7 @@
 export default {
   arrowParens: "avoid",
   semi: true,
+  proseWrap: "always",
   tabWidth: 2,
   printWidth: 80,
   singleQuote: false,
@@ -17,6 +18,10 @@ export default {
       options: {
         parser: "astro",
       },
+    },
+    {
+      files: "*.md",
+      options: {},
     },
   ],
 };

@@ -8,8 +8,8 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
-    "format:check": "prettier --check .",
-    "format": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "lint": "eslint .",
     "ts:check": "tsc --noEmit --incremental false"
   },

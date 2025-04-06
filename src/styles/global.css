@@ -39,7 +39,7 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background h-max;
   }
   a,
   button {
@@ -51,7 +51,7 @@ html[data-theme="dark"] {
   }
   section,
   footer {
-    @apply mx-auto max-w-3xl px-4;
+    @apply mx-auto max-w-4xl px-4;
   }
 }
 
@@ -68,5 +68,9 @@ html[data-theme="dark"] {
         content: none;
       }
     }
+  }
+
+  img {
+    background-color: white;
   }
 }

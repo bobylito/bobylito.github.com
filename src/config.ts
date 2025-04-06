@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://bobylito.me/",
   desc: "Personal website of bobylito",
   title: "Bobylito",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "bobylito-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 5,
   postPerPage: 10,
@@ -12,7 +12,7 @@ export const SITE = {
   showArchives: true,
   showBackButton: true,
   editPost: {
-    url: "https://github.com/bobylito/bobylito.github.com/edit/master/src/data/blog",
+    url: "https://github.com/bobylito/bobylito.github.com/edit/master/data",
     text: "Suggest Changes",
     appendFilePath: true,
   },

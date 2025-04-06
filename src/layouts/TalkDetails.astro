@@ -19,20 +19,13 @@ export interface Props {
 
 const { post, posts } = Astro.props;
 
-const {
-  title,
-  description,
-  ogImage,
-  pubDatetime,
-  tags,
-  pdf_file
-} = post.data;
+const { title, description, ogImage, pubDatetime, tags, pdf_file } = post.data;
 
 const { Content } = await render(post);
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/posts/${slugifyStr(title)}/index.png`,
+  ogImageUrl ?? `/talks/${slugifyStr(title)}/index.png`,
   Astro.url.origin
 ).href;
 
@@ -64,7 +57,7 @@ const nextPost =
   <main
     id="main-content"
     class:list={[
-      "mx-auto w-full max-w-3xl px-4 pb-12",
+      "mx-auto w-full max-w-4xl px-4 pb-12",
       { "mt-8": !SITE.showBackButton },
     ]}
     data-pagefind-body
@@ -76,16 +69,16 @@ const nextPost =
       {title}
     </h1>
     <div class="flex items-center gap-4">
-      <Datetime
-        pubDatetime={pubDatetime}
-        size="lg"
-        class="my-2"
-      />
+      <Datetime pubDatetime={pubDatetime} size="lg" class="my-2" />
     </div>
-    <article id="article" class="mx-auto prose mt-8 max-w-3xl">
+    <article id="article" class="mx-auto prose mt-8 max-w-4xl">
       <Content />
-      <div class="flex flex-col items-center w-full">
-        <embed src={pdf_file} class="w-full px-4 h-128" type="application/pdf">
+      <div class="flex w-full flex-col items-center">
+        <embed
+          src={pdf_file}
+          class="h-128 w-full px-4"
+          type="application/pdf"
+        />
       </div>
     </article>
 

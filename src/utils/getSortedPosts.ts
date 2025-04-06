@@ -1,7 +1,9 @@
-import type { CollectionEntry } from "astro:content";
+import type { CommonContent } from "@/content.config";
 import postFilter from "./postFilter";
 
-const getSortedPosts = (posts: CollectionEntry<"blog">[]) => {
+function getSortedPosts<T extends { id: string; data: CommonContent }>(
+  posts: T[]
+): T[] {
   return posts
     .filter(postFilter)
     .sort(
@@ -13,6 +15,6 @@ const getSortedPosts = (posts: CollectionEntry<"blog">[]) => {
           new Date(a.data.modDatetime ?? a.data.pubDatetime).getTime() / 1000
         )
     );
-};
+}
 
 export default getSortedPosts;
