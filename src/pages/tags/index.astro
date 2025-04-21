@@ -9,18 +9,24 @@ import { getUniqueTags } from "@/utils/getUniqueTags";
 import { SITE } from "@/config";
 
 const posts = await getCollection("blog");
-const projects =await getCollection('projects')
-const talks = await getCollection('talks')
+const projects = await getCollection("projects");
+const talks = await getCollection("talks");
 
 const tags = getUniqueTags([...posts, ...projects, ...talks]);
-const maxCount = tags.reduce((m, t) => { return Math.max(m, t.count)}, 0)
+const maxCount = tags.reduce((m, t) => {
+  return Math.max(m, t.count);
+}, 0);
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
     <ul>
-      {tags.map(({ tag, tagName, count }) => <Tag {tag} {tagName} {count} {maxCount} size="lg" />)}
+      {
+        tags.map(({ tag, tagName, count }) => (
+          <Tag {tag} {tagName} {count} {maxCount} size="lg" />
+        ))
+      }
     </ul>
   </Main>
   <Footer />

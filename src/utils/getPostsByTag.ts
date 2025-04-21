@@ -7,7 +7,7 @@ function getPostsByTag<T extends { id: string; data: CommonContent }>(
   tag: string
 ) {
   return getSortedPosts(
-    posts.filter((post) => slugifyAll(post.data.tags).includes(tag))
+    posts.filter(post => slugifyAll(post.data.tags).includes(tag))
   );
 }
 

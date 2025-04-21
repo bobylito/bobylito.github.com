@@ -10,7 +10,8 @@ export interface Props {
 }
 
 const { tag, tagName, count, maxCount, size = "sm" } = Astro.props;
-const saturate = count && maxCount ? Math.round( (count * 200) / maxCount ) : null
+const saturate =
+  count && maxCount ? Math.round((count * 200) / maxCount) : null;
 ---
 
 <li
@@ -18,14 +19,14 @@ const saturate = count && maxCount ? Math.round( (count * 200) / maxCount ) : nu
     "group inline-block group-hover:cursor-pointer",
     size === "sm" ? "my-1 underline-offset-4" : "mx-1 my-3 underline-offset-8",
   ]}
-  style={{filter: `saturate(${saturate}%)`}}
+  style={{ filter: `saturate(${saturate}%)` }}
 >
   <a
     href={`/tags/${tag}/`}
     transition:name={tag}
     class:list={[
       "relative pr-2 text-lg underline decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1",
-      { "text-sm": size === "sm"},
+      { "text-sm": size === "sm" },
     ]}
   >
     <IconHash

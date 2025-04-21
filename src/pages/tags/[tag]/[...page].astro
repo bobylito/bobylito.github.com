@@ -13,8 +13,8 @@ import { SITE } from "@/config";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = await getCollection("blog");
-  const projects =await getCollection('projects')
-  const talks = await getCollection('talks')
+  const projects = await getCollection("projects");
+  const talks = await getCollection("talks");
 
   const tags = getUniqueTags([...posts, ...projects, ...talks]);
 

@@ -12,7 +12,7 @@ const base64Image = Buffer.from(image, "binary").toString("base64");
 // combine all strings
 const base64ImageStr = `data:image/jpeg;base64,${base64Image}`;
 
-export default async (post) => {
+export default async post => {
   return satori(
     {
       type: "div",

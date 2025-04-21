@@ -22,7 +22,7 @@ const blog = defineCollection({
       author: z.string().default(SITE.author),
       featured: z.boolean().optional(),
       ogImage: image()
-        .refine((img) => img.width >= 1200 && img.height >= 630, {
+        .refine(img => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
         })
         .or(z.string())
@@ -47,7 +47,7 @@ const talks = defineCollection({
       source_file: z.string().optional(),
       pdf_file: z.string(),
       ogImage: image()
-        .refine((img) => img.width >= 1200 && img.height >= 630, {
+        .refine(img => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
         })
         .or(z.string())
@@ -62,7 +62,7 @@ const projects = defineCollection({
       type: z.literal("projects").catch("projects"),
       is_finished: z.boolean().default(false),
       ogImage: image()
-        .refine((img) => img.width >= 1200 && img.height >= 630, {
+        .refine(img => img.width >= 1200 && img.height >= 630, {
           message: "OpenGraph image must be at least 1200 X 630 pixels!",
         })
         .or(z.string())

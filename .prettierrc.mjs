@@ -21,7 +21,11 @@ export default {
     },
     {
       files: "*.md",
-      options: {},
+      options: {
+        parser: "markdown",
+        printWidth: 80,
+        proseWrap: "always",
+      },
     },
   ],
 };

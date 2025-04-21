@@ -15,17 +15,17 @@ type Content = {
 export function getUniqueTags(posts: Content[]): Tag[] {
   const tags = posts
     .filter(postFilter)
-    .flatMap((post) => post.data.tags)
-    .map((tag) => ({ tag: slugifyStr(tag), tagName: tag }));
+    .flatMap(post => post.data.tags)
+    .map(tag => ({ tag: slugifyStr(tag), tagName: tag }));
 
   const uniqueTags = tags
     .filter(
       (value, index, self) =>
-        self.findIndex((tag) => tag.tag === value.tag) === index
+        self.findIndex(tag => tag.tag === value.tag) === index
     )
-    .map((tag) => ({
+    .map(tag => ({
       ...tag,
-      count: tags.filter((t) => t.tagName === tag.tagName).length,
+      count: tags.filter(t => t.tagName === tag.tagName).length,
     }))
     .sort((tagA, tagB) => tagA.tag.localeCompare(tagB.tag));
 
