@@ -1,0 +1,180 @@
+---
+title: Japan trip notes
+description: Notes about our trip to Japan in 2025
+published: true
+pubDatetime: 2025-04-28
+tags:
+  - travel
+  - japan
+---
+
+- 2025-04-04 / 05
+  - travel
+  - met with Kento in Beijing
+  - Sansuiso hotel. Close to airport, direct access to shibuya shinjuku. Close
+    to river.
+  - Great for observing the cherry tree blossom
+- 2025-04-06
+  - visit of meiji jingu. Park in memory of emperor Meiji and his wife
+  - Bought some amulets and made a wish
+  - met with a greek friend
+  - had lunch at a tonkatsu place maisen
+  - Bagage coffee, good cold brew
+  - met with Kento family and their friends
+- 2025-04-07
+  - Expensive but buttery delicious croissants at Echire
+  - Team lab borderless
+    - super cool experience, rivers of pixels, flowers everywhere, animated
+      drawings, mirrors and infinity, and animals parading
+  - Roppongi hills, too chic
+- 2025-04-08
+  - Travel to Nagoya
+  - Visited bic camera for fuji instax films
+  - Visited the aquarium
+  - Dialekti was on work mode while we visited the fishes with Hermes
+  - Dolphin show was great
+  - Found our first doudou friend (that we lost the day after). We love you
+    delfinaki
+- 2025-04-09
+  - Aichi Park
+  - Ghibli
+  - So lovely the reproductions of things from the movies
+  - We flew with brooms :D
+  - We also flew some steam punk flying bikes with epic music :)
+  - Lovely sausage sandwich
+  - We saw an exclusive movie, very Ghibli
+  - Bought some souvenirs (a lot :lol:)
+- 2025-04-10
+  - Musée des trains JR
+  - Depart pour Osaka
+- 2025-04-11
+  - Universal Japan / Super Mario world
+- 2025-04-12
+  - Balade dans la ville et shopping pantalon avec Hermès
+  - TeamLab dans le parc en soirée
+- 2025-04-13
+  - Osaka --> Takayama
+    - Train par la cote nord
+    - Tempete --> Train contourne le lac par l'est
+    - retards, train loupé sur le dernier segment
+  - Superbe hotel à Takayama
+  - Balade dans la vieille ville sous la pluie. Nous avons la ville pour nous :)
+- 2025-04-14
+  - Festival de printemps
+    - Présentation des Yatai, magnifiques char, trésors des familles de Takayama
+    - Spectacle de Marionettes 
+- 2025-04-15
+  - Takayama --> Kyoto
+    - Takayama --> Nagoya : Hida limited, trop belle vue
+    - Nagoya --> Kyoto : shinkansen
+- 2025-04-16
+  - Marché au puces
+    - Coupelles
+    - Trains
+  - Heian jingu
+    - Spectacle traditionnel, trop beau
+    - Visite du parc
+  - Palais d'argent
+    - derniere minute mais ça valais le coup
+  - Chemin des philosophes
+    - trop belle balade 
+- 2025-04-17
+  - Musée des trains de Kyoto
+    - excellente surprise
+    - balade en train à vapeur
+    - simulateurs shinkansen et train classiques
+    - pleins de loco
+- 2025-04-18
+  - Foret de bambous
+  - balade au parc
+  - montagne aux singes
+    - photos sur la banane
+  - 
+- 2025-04-19
+  - Kyoto --> Takamatsu
+  - Ville sympathique mais rien de ouf
+  - Super hotel pas ouf super
+  - Mais la cuisine indienne :D
+- 2025-04-20
+  - Visite de Naoshima
+  - Gros stress pour arriver sur l'ile
+    - Ne pas essayer de prendre des routes exotiques et prendre le gros bateau
+    - Il y a deux bus sur l'ile mais il faut quand même un peu regarder
+  - Chichu museum
+    - La claque
+    - Batiment sur mesure pour les oeuvres, écrins magnifiques et experiences uniques
+    - Le restaurant est bien même si ça peut prendre du temps
+  - Hiroshi Sugimoto Gallery
+    - Degustation
+    - Superbe photos 
+  - Art house project "Minamidera"
+    - No spoil mais c'est vraiment trop bien
+  - Art house project "Ring of Fire - Solar Yang & Lunar Weerasethakul"
+    - Tres bien même si il est un peu plus dur d'entrer dedans
+- 2025-04-21
+  - Chill day
+  - Balade dans l'ile 
+  - Tout est fermé quand tout est fermé
+  - Ghetto dejeuner sur le bord de la route a coté du 7/11
+  - Super bon café
+  - Visite de la montagne du chat
+  - Tete a tete avec Hermès l'exploration
+  - Diner au restaurant italien
+- 2025-04-22
+  - Naoshima --> Okayama
+  - Rencontre avec les français
+  - Jeux dans les courges de Kusama <3
+  - Bateau, train et bavardages :)
+  - Mall
+  - Changement de vitre de protection du téléphone et upgrade de la coque
+- 2025-04-23
+  - Visite du chateau d'Okayama
+  - Plus un musée qu'un vrai chateau
+  - Superbe batiment
+  - Okayama --> Himeji
+- 2025-04-24
+  - Balade autour du chateau. Super belle balade.
+  - Visite du Chateau d'Himeji
+  - Burger au boeuf de Kobe
+  - Glace au Matcha pour le dessert
+- 2025-04-25
+  - Himeji --> Osaka
+  - Magasin de trains (modèles réduits et produits dérivés)
+  - Beer garden??
+  - Visite du quartier central avec les devantures extravaguantes
+- 2025-04-26
+  - Osaka expo
+  - Plein de trucs cools mais un peu dur de comprendre comment accéder à tout
+- 2025-04-27
+  - Osaka
+    - rencontre avec les français
+  - Départ pour Tokyo
+  - Perte de mon cahier de tampons (petit carnet rouge Ghibli / Porco Rosso)
+- 2025-04-28
+  - Tokyo
+  - Balade dans un parc au sud du Sky Tree
+    - Petite aire de jeu
+    - Jolie reconstitution d'un ruisseau avec une cascade
+    - Hermes a fini les fesses dans l'eau
+  - Degustation de corn dog corèen a l'appartement
+    - Corn dog au sucre, tu peux pas comprendre
+  - Lessive a la laverie automatique
+  - Visite de la Tokyo Tower dans les nuages (mais on a eu une éclaircie pour voir la ville)
+  - Fin de journée pluvieuse et on a croisé des touristes qui revenait dans des voitures de drift
+- 2025-04-29
+  - On a trouvé une radio pour Yaya :)
+  - Gacha pon a Akihabara!!!
+  - Spectacle de clown de rue au Parc Ueno
+    - inattendu et super rigolo
+  - balades
+  - achat de chaussures et vétements
+- 2025-04-30
+  - Visite du Team Lab planets
+  - On a fait tout le train automatique de Odaiba
+  - Visite du Pokémon center et on a capturé pleins de Pokémon
+- 2025-05-01
+  - Derniers achats 
+    - visite d'un magasin de décoration traditionnel
+    - le tigre qui hoche la tête
+    - Mangas et goodies trains
+  - Départ 
