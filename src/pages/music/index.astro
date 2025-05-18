@@ -9,7 +9,7 @@ import { getCollection } from "astro:content";
 const music = await getCollection("soundcloud");
 ---
 
-<Layout title={`Archives | ${SITE.title}`}>
+<Layout title={`Music | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Music" pageDesc="Musical creations by bobylito">
     <div id="aplayer" data-playlist={JSON.stringify(music)}></div>
