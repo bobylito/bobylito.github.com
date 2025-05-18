@@ -38,17 +38,35 @@ html[data-theme="dark"] {
   .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
     fill: #aaa;
   }
-  .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path {
+  .aplayer
+    .aplayer-info
+    .aplayer-controller
+    .aplayer-time
+    .aplayer-icon:hover
+    path {
     fill: #fff;
   }
-  .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar {
+  .aplayer
+    .aplayer-info
+    .aplayer-controller
+    .aplayer-volume-wrap
+    .aplayer-volume-bar-wrap
+    .aplayer-volume-bar {
     background: #666;
   }
   .aplayer .aplayer-lrc:before {
-    background: linear-gradient(to bottom, rgb(51, 51, 51) 0%, rgba(51, 51, 51, 0) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgb(51, 51, 51) 0%,
+      rgba(51, 51, 51, 0) 100%
+    );
   }
   .aplayer .aplayer-lrc:after {
-    background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.8) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(51, 51, 51, 0) 0%,
+      rgba(51, 51, 51, 0.8) 100%
+    );
   }
   .aplayer .aplayer-lrc p {
     color: #aaa;

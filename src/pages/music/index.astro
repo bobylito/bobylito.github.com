@@ -33,21 +33,23 @@ const music = await getCollection("soundcloud");
           }[];
         };
       };
+      document.addEventListener("astro:page-load", () => {
+        const player = document.getElementById("aplayer");
+        const playlists: Playlist[] = JSON.parse(
+          player?.dataset.playlist || ""
+        );
 
-      const player = document.getElementById("aplayer");
-      console.log(player?.dataset.playlist);
-      const playlists: Playlist[] = JSON.parse(player?.dataset.playlist || "");
-
-      new APlayer({
-        container: player,
-        theme: '#432e54',
-        listMaxHeight: '50vh',
-        audio: playlists.map(m => ({
-          name: m.data.title,
-          artist: m.data.author,
-          url: m.data.enclosures[0].url,
-          cover: m.data.image.url,
-        })),
+        new APlayer({
+          container: player,
+          theme: "#432e54",
+          listMaxHeight: "50vh",
+          audio: playlists.map(m => ({
+            name: m.data.title,
+            artist: m.data.author,
+            url: m.data.enclosures[0].url,
+            cover: m.data.image.url,
+          })),
+        });
       });
     </script>
   </Main>
