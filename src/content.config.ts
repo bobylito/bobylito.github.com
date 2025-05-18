@@ -1,4 +1,5 @@
 import { SITE } from "@/config";
+import { feedLoader } from "@ascorbic/feed-loader";
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
@@ -70,4 +71,10 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { blog, talks, projects };
+const soundcloud = defineCollection({
+  loader: feedLoader({
+    url: "https://feeds.soundcloud.com/users/soundcloud:users:2409674/sounds.rss",
+  }),
+});
+
+export const collections = { blog, talks, projects, soundcloud };

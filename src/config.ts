@@ -9,7 +9,7 @@ export const SITE = {
   postPerIndex: 5,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
+  showArchives: false,
   showBackButton: true,
   editPost: {
     url: "https://github.com/bobylito/bobylito.github.com/edit/master/data",

@@ -1,0 +1,55 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import { SITE } from "@/config";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import { getCollection } from "astro:content";
+
+const music = await getCollection("soundcloud");
+---
+
+<Layout title={`Archives | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="Music" pageDesc="Musical creations by bobylito">
+    <div id="aplayer" data-playlist={JSON.stringify(music)}></div>
+    <script>
+      import "aplayer/dist/APlayer.min.css";
+      // @ts-ignore
+      import APlayer from "aplayer";
+
+      // Minimal subset for working with the data
+      type Playlist = {
+        data: {
+          title: string | null;
+          date: Date | null;
+          pubdate: Date | null;
+          author: string | null;
+          image: {
+            url?: string | undefined;
+          };
+          enclosures: {
+            url: string;
+          }[];
+        };
+      };
+
+      const player = document.getElementById("aplayer");
+      console.log(player?.dataset.playlist);
+      const playlists: Playlist[] = JSON.parse(player?.dataset.playlist || "");
+
+      new APlayer({
+        container: player,
+        theme: '#432e54',
+        listMaxHeight: '50vh',
+        audio: playlists.map(m => ({
+          name: m.data.title,
+          artist: m.data.author,
+          url: m.data.enclosures[0].url,
+          cover: m.data.image.url,
+        })),
+      });
+    </script>
+  </Main>
+  <Footer />
+</Layout>
