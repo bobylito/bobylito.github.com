@@ -13,6 +13,9 @@ In 2025, I participated to the jamuary. This is a yearly event in which during a
 month, artists from all over the world make some music and publish it. From what
 I've seen it's mostly passionate people in the electronic music space.
 
+[The EP files](https://drive.google.com/file/d/1xzDbBhpGpQVTxbjgWIDIVZh6UAKOSg0n/view?usp=sharing)
+[SoundCloud](https://soundcloud.com/bobylito/sets/jamuary-2025)
+
 ## My setup
 
 The core of the setup is the Oxi One plugged on an iPad with Kynematic Aum for
@@ -30,3 +33,5 @@ mixing and hosting plugins.
 - Jamuary 6 : [youtube](https://youtu.be/923R16FoyRg?si=Wo_LHKcISAv8N5B7)
 - Jamuary 7 - echoes of La Ciotat :
   [youtube](https://youtu.be/R-ESU4wze_A?si=RGe4crGb7r_G7_aY)
+
+
