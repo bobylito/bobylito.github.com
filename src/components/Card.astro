@@ -11,7 +11,7 @@ export interface Props {
 
 const { href, frontmatter, secHeading = true } = Astro.props;
 
-const { title, pubDatetime, modDatetime, description } = frontmatter;
+const { title, pubDatetime, modDatetime, description, draft} = frontmatter;
 
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
@@ -22,14 +22,15 @@ const headerProps = {
 <li class="my-6">
   <a
     href={href}
-    class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+    class="flex flex-row content-center gap-3 text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0 "
   >
     {
       secHeading ? (
-        <h2 {...headerProps}>{title}</h2>
+        <h2 {...headerProps}>{title}</h2> 
       ) : (
         <h3 {...headerProps}>{title}</h3>
-      )
+    )}
+    {draft ? <span class="text-xs my-auto">(Work in progress)</span>: ''
     }
   </a>
   <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
