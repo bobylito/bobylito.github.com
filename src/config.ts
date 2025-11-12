@@ -5,7 +5,7 @@ export const SITE = {
   desc: "Personal website of bobylito",
   title: "Bobylito",
   ogImage: "bobylito-og.jpg",
-  lightAndDarkMode: true,
+  lightAndDarkMode: false,
   postPerIndex: 5,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

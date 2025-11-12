@@ -15,7 +15,7 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
   --background: #432e54;
-  --foreground: #e8bcb9;
+  --foreground: #e1c3c1;
   --accent: #ae445a;
   --muted: #4b4376;
   --border: #4b4376;
@@ -152,6 +152,36 @@ html[data-theme="dark"] {
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
+}
+
+.main-background {
+  --out-opacity: 0.3;
+  --in-opacity: 0.9;
+  background:
+    repeat -250px 400px / 800px 600px
+      radial-gradient(
+        circle,
+        rgba(41, 29, 52, var(--in-opacity)) 2%,
+        rgba(64, 47, 82, var(--out-opacity)) 95%
+      ),
+    repeat 150px 150px / 100% 1000px
+      radial-gradient(
+        circle,
+        rgba(41, 29, 52, var(--in-opacity)) 8%,
+        rgba(64, 47, 82, var(--out-opacity)) 90%
+      ),
+    repeat -250px -200px / 100% 70%
+      radial-gradient(
+        circle,
+        rgba(41, 29, 52, var(--in-opacity)) 10%,
+        rgba(64, 47, 82, var(--out-opacity)) 100%
+      ),
+    repeat -200px 600px
+      radial-gradient(
+        circle,
+        rgba(41, 29, 52, var(--in-opacity)) 0%,
+        rgba(64, 47, 82, var(--out-opacity)) 60%
+      );
 }
 
 @utility prose {
