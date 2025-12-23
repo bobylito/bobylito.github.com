@@ -34,11 +34,8 @@ export default async (post: PostInfos) => {
             type: "div",
             props: {
               style: {
-                border: "16px solid #000",
-                borderRadius: "24px",
                 display: "flex",
                 justifyContent: "center",
-                background: "hsla(268, 26%, 25%, 0.7)",
                 margin: "auto",
                 width: "94%",
                 height: "80%",
@@ -89,30 +86,6 @@ export default async (post: PostInfos) => {
                           marginBottom: "8px",
                           fontSize: 56,
                         },
-                        children: [
-                          {
-                            type: "span",
-                            props: {
-                              children: [
-                                "by ",
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: { color: "transparent" },
-                                    children: '"',
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                          {
-                            type: "span",
-                            props: {
-                              style: { overflow: "hidden", fontWeight: "bold" },
-                              children: SITE.title,
-                            },
-                          },
-                        ],
                       },
                     },
                   ],
