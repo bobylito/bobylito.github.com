@@ -9,12 +9,18 @@ export async function getStaticPaths() {
   );
 
   return posts.map(post => ({
-    params: { slug: slugifyStr(post.data.title) },
+    params: { slug: slugifyStr(post.id) },
     props: post,
   }));
 }
 
 export const GET: APIRoute<CollectionEntry<"talks">> = async ({ props }) =>
-  new Response(await generateOgImageForPost(props), {
-    headers: { "Content-Type": "image/png" },
-  });
+  new Response(
+    await generateOgImageForPost({
+      title: props.data.title,
+      description: props.data.description,
+    }),
+    {
+      headers: { "Content-Type": "image/png" },
+    }
+  );

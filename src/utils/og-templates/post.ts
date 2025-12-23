@@ -3,16 +3,19 @@ import satori from "satori";
 import { SITE } from "@/config";
 import fs from "node:fs/promises";
 import loadGoogleFonts from "../loadGoogleFont";
+import path from "node:path";
 
 const imgPath = "./public/bobylito-blank-og.jpg";
-const image = await fs.readFile(imgPath);
-// convert image file to base64-encoded string
-const base64Image = Buffer.from(image, "binary").toString("base64");
+const imageB64 = await fs.readFile(path.resolve(imgPath), {
+  encoding: "base64",
+});
+const base64ImageStr = `data:image/jpeg;base64,${imageB64}`;
 
-// combine all strings
-const base64ImageStr = `data:image/jpeg;base64,${base64Image}`;
-
-export default async post => {
+export type PostInfos = {
+  title?: string | null;
+  description?: string | null;
+};
+export default async (post: PostInfos) => {
   return satori(
     {
       type: "div",
@@ -32,7 +35,6 @@ export default async post => {
             props: {
               style: {
                 border: "16px solid #000",
-                background: "#fefbfb",
                 borderRadius: "24px",
                 display: "flex",
                 justifyContent: "center",
@@ -62,7 +64,7 @@ export default async post => {
                           maxHeight: "44%",
                           overflow: "hidden",
                         },
-                        children: post.data.title,
+                        children: post.title,
                       },
                     },
                     {
@@ -74,7 +76,7 @@ export default async post => {
                           maxHeight: "40%",
                           overflow: "hidden",
                         },
-                        children: post.data.description,
+                        children: post.description,
                       },
                     },
                     {
@@ -126,7 +128,7 @@ export default async post => {
       height: 1260,
       embedFont: true,
       fonts: await loadGoogleFonts(
-        post.data.title + post.data.description + SITE.title + "by"
+        `${post.title}${post.description}${SITE.title}by`
       ),
     }
   );
