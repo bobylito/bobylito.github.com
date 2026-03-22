@@ -2,10 +2,11 @@ import type { CommonContent } from "@/content.config";
 import postFilter from "./postFilter";
 
 function getSortedPosts<T extends { id: string; data: CommonContent }>(
-  posts: T[]
+  posts: T[],
+  onlyPublished: boolean = false
 ): T[] {
   return posts
-    .filter(postFilter)
+    .filter(p => postFilter(p, onlyPublished))
     .sort(
       (a, b) =>
         Math.floor(

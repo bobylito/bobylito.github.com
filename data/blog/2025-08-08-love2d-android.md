@@ -26,5 +26,4 @@ tags:
 - install love2d
 - make a first love2d thing
 
-
 Bonus : configure love2d types in NVIM https://dev.to/je12emy/how-to-configure-neovims-lua-ls-for-love2d-1an6
