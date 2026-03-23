@@ -14,7 +14,7 @@ type Content = {
 
 export function getUniqueTags(posts: Content[]): Tag[] {
   const tags = posts
-    .filter(postFilter)
+    .filter(p => postFilter(p, true))
     .flatMap(post => post.data.tags)
     .map(tag => ({ tag: slugifyStr(tag), tagName: tag }));
 
