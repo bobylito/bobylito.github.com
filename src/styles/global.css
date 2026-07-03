@@ -154,31 +154,136 @@ html[data-theme="dark"] {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
+@property --x1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --y1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --x2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --y2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --x3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --y3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --x4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --y4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+
+@keyframes colorChange1 {
+  0% {
+    --x1: 50%;
+    --y1: 50%;
+  }
+  50% {
+    --x1: 60%;
+    --y1: 60%;
+  }
+  100% {
+    --x1: 50%;
+    --y1: 50%;
+  }
+}
+
+@keyframes colorChange2 {
+  0% {
+    --x2: 50%;
+    --y2: 50%;
+  }
+  50% {
+    --x2: 70%;
+    --y2: 60%;
+  }
+  100% {
+    --x2: 50%;
+    --y2: 50%;
+  }
+}
+@keyframes colorChange3 {
+  0% {
+    --x3: 50%;
+    --y3: 50%;
+  }
+  50% {
+    --x3: 30%;
+    --y3: 30%;
+  }
+  100% {
+    --x3: 50%;
+    --y3: 50%;
+  }
+}
+
+@keyframes colorChange4 {
+  0% {
+    --x4: 50%;
+    --y4: 56%;
+  }
+  50% {
+    --x4: 60%;
+    --y4: 60%;
+  }
+  100% {
+    --x4: 50%;
+    --y4: 56%;
+  }
+}
+
 .main-background {
-  --out-opacity: 0.3;
+  --out-opacity: 0.2;
   --in-opacity: 0.9;
+  animation:
+    colorChange1 15s infinite alternate,
+    colorChange2 17s infinite alternate,
+    colorChange3 12s infinite alternate,
+    colorChange4 20s infinite alternate;
   background:
-    repeat -250px 400px / 800px 600px
+    repeat -250px 400px / 1600px 900px
       radial-gradient(
-        circle,
+        circle closest-side at var(--x1) 50%,
         rgba(41, 29, 52, var(--in-opacity)) 2%,
         rgba(64, 47, 82, var(--out-opacity)) 95%
       ),
     repeat 150px 150px / 100% 1000px
       radial-gradient(
-        circle,
+        circle closest-side at 50% var(--x2),
         rgba(41, 29, 52, var(--in-opacity)) 8%,
         rgba(64, 47, 82, var(--out-opacity)) 90%
       ),
     repeat -250px -200px / 100% 70%
       radial-gradient(
-        circle,
+        circle closest-side at 50% var(--x3),
         rgba(41, 29, 52, var(--in-opacity)) 10%,
         rgba(64, 47, 82, var(--out-opacity)) 100%
       ),
     repeat -200px 600px
       radial-gradient(
-        circle,
+        circle closest-side at 50% var(--x4),
         rgba(41, 29, 52, var(--in-opacity)) 0%,
         rgba(64, 47, 82, var(--out-opacity)) 60%
       );
